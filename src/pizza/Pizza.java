@@ -14,7 +14,19 @@ public class Pizza {
 		}
 	};
 
-	public void getPizzaPrice() {
-		System.out.println(this.price);
-	};
+	public void addExtraCheese() {
+		
+	}
+	
+	public void addExtraToppings () {
+		
+	}
+	
+	public void takeAway() {
+		
+	}
+	
+	public void getBill () {
+		
+	}
 }
