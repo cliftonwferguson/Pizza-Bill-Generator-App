@@ -7,6 +7,10 @@ public class Pizza {
 	private int extraToppingsAdded = 150;
 	private int backPackPrice = 20;
 	private int basePizzaPrice;
+	private boolean isExtraCheeseAdded;
+	private boolean isExtraToppingsAdded;
+	private boolean isOptedForTakeaway;
+	
 
 	public Pizza(Boolean veg) {
 		super();
