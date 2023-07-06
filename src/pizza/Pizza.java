@@ -6,6 +6,7 @@ public class Pizza {
 	private int extraCheesePrice = 100;
 	private int extraToppingsAdded = 150;
 	private int backPackPrice = 20;
+	private int basePizzaPrice;
 
 	public Pizza(Boolean veg) {
 		super();
@@ -15,6 +16,7 @@ public class Pizza {
 		} else {
 			this.price = 400;
 		}
+		basePizzaPrice = this.price;
 	};
 
 	public void addExtraCheese() {
@@ -33,6 +35,11 @@ public class Pizza {
 	}
 	
 	public void getBill () {
-		System.out.println(this.price);
+		System.out.println("Pizza: "+basePizzaPrice);
 	}
 }
+
+//  Base pizza: 300
+//  Toppings: 150
+//  Cheese: 100
+//  Take away: 20
