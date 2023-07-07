@@ -29,7 +29,7 @@ public class Pizza {
 		this.price += extraCheesePrice;
 	}
 	
-	public void addExtraToppings () {
+	public void addExtraToppings () { 
 		isExtraToppingsAdded = true;
 		this.price += extraToppingsAdded;
 	}
