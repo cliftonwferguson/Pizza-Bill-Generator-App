@@ -44,28 +44,21 @@ public class Pizza {
 		String options = "";	
 		if(isExtraCheeseAdded) {
 			options += "Extra cheese added: "+extraCheesePrice+ "\n";
-			
+			pizzaBill += extraCheesePrice;
 		}
 		if(isExtraToppingsAdded) {
 			options += "Extra toppings added: "+extraToppingsAdded+ "\n";
+			pizzaBill += extraToppingsAdded;
 		}
 		if(isOptedForTakeaway) {
 			options += "Opted for takeaway: "+backPackPrice+ "\n";
+			pizzaBill += backPackPrice;
 		}
 		System.out.println("Pizza: options"+options);
 	}
 	
-	public void totalBill() {
-		if(isExtraCheeseAdded) {
-			pizzaBill += extraCheesePrice;
-			
-		}
-		if(isExtraToppingsAdded) {
-			options += "Extra toppings added: "+extraToppingsAdded+ "\n";
-		}
-		if(isOptedForTakeaway) {
-			options += "Opted for takeaway: "+backPackPrice+ "\n";
-		}
+	public void totalBill() { 
+		System.out.println("Total Pizza Cost: "+(basePizzaPrice+pizzaBill));
 	}
 }
 
