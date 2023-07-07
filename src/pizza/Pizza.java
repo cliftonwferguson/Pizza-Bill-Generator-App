@@ -7,6 +7,7 @@ public class Pizza {
 	private int extraToppingsAdded = 150;
 	private int backPackPrice = 20;
 	private int basePizzaPrice;
+	private int pizzaBill;
 	private boolean isExtraCheeseAdded = false;
 	private boolean isExtraToppingsAdded = false;
 	private boolean isOptedForTakeaway = false;
@@ -25,24 +26,46 @@ public class Pizza {
 
 	public void addExtraCheese() {
 		isExtraCheeseAdded = true;
-		System.out.println("Extra cheese added");
 		this.price += extraCheesePrice;
 	}
 	
 	public void addExtraToppings () {
 		isExtraToppingsAdded = true;
-		System.out.println("Extra toppings added");
 		this.price += extraToppingsAdded;
 	}
 	
 	public void takeAway() {
 		isOptedForTakeaway=true;
-		System.out.println("Take away opted");
 		this.price += backPackPrice;
 	}
 	
-	public void getBill () {
-		System.out.println("Pizza: "+basePizzaPrice);
+	public void addOptions () {
+		System.out.println("base pizza price: "+basePizzaPrice);
+		String options = "";	
+		if(isExtraCheeseAdded) {
+			options += "Extra cheese added: "+extraCheesePrice+ "\n";
+			
+		}
+		if(isExtraToppingsAdded) {
+			options += "Extra toppings added: "+extraToppingsAdded+ "\n";
+		}
+		if(isOptedForTakeaway) {
+			options += "Opted for takeaway: "+backPackPrice+ "\n";
+		}
+		System.out.println("Pizza: options"+options);
+	}
+	
+	public void totalBill() {
+		if(isExtraCheeseAdded) {
+			pizzaBill += extraCheesePrice;
+			
+		}
+		if(isExtraToppingsAdded) {
+			options += "Extra toppings added: "+extraToppingsAdded+ "\n";
+		}
+		if(isOptedForTakeaway) {
+			options += "Opted for takeaway: "+backPackPrice+ "\n";
+		}
 	}
 }
 
